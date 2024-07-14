@@ -3,12 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
+    "@tailwindcss/forms": "^0.5.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.19",
+    "axios": "^1.7.2",
+    "postcss": "^8.4.39",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.1",
+    "tailwindcss": "^3.4.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +42,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-class-properties": "latest",
+    "@babel/plugin-transform-nullish-coalescing-operator": "latest",
+    "@babel/plugin-transform-numeric-separator": "latest",
+    "@babel/plugin-transform-optional-chaining": "latest",
+    "@babel/plugin-transform-private-methods": "latest",
+    "@babel/plugin-transform-private-property-in-object": "^7.14.5",
+    "@rollup/plugin-terser": "latest",
+    "svgo": "^2.0.0"
   }
 }
