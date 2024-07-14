@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_KEY = 'IPtyCoigNxyi6bERnADd1qXkyQi83qqd'; // Replace with your Ticketmaster API key
+const API_KEY = 'empty'; // Replace with your Ticketmaster API key
 
 export default function SearchBoard() {
     const [city, setCity] = useState('');
