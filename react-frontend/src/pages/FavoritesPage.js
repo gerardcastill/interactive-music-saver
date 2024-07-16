@@ -1,13 +1,13 @@
 import React from 'react';
 import SidebarLayout from "../components/layouts/SidebarLayout";
-import SearchBoard from "../components/SearchBoard";
+import FavoritesList from "../components/FavoritesList";
 
-function SearchBoardPage() {
+function FavoritesPage() {
     return (
         <SidebarLayout>
-            <SearchBoard />
+            <FavoritesList />
         </SidebarLayout>
     );
 }
 
-export default SearchBoardPage;
+export default FavoritesPage;

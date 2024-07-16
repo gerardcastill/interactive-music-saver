@@ -1,13 +1,13 @@
 import React from "react";
-import About from "../components/static-pages/About";
+import AboutPage from "./static-pages/AboutPage";
 import NavbarLayout from "../components/layouts/NavbarLayout";
 
-function AboutPage() {
+function AboutMePage() {
     return (
         <NavbarLayout>
-            <About />
+            <AboutPage />
         </NavbarLayout>
     );
 }
 
-export default AboutPage;
+export default AboutMePage;
