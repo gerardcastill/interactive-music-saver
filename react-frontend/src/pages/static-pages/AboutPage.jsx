@@ -29,7 +29,7 @@ const values = [
     },
 ]
 
-export default function About() {
+export default function AboutPage() {
     return (
         <div className="bg-white">
 
@@ -37,7 +37,7 @@ export default function About() {
                 {/* Flex Container */}
                 <div className={"mx-auto max-w-7xl px-2 lg:px-4 py-10 lg:flex"}>
                     {/* Self section */}
-                    <div className="flex-1 lg:px-10">
+                    <div className="flex-1 lg:px-10 mb-10 lg:mb-0">
                         <img className="aspect-[14/13] w-full rounded-2xl object-cover" src={Image} alt="" />
                         <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-black">
                             Gerardo Castillo
