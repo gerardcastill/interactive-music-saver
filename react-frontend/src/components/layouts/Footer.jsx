@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer(){
     return (
         <div className="md:flex md:items-center md:justify-between bg-black">

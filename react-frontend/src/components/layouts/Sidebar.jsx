@@ -1,5 +1,3 @@
-'use client'
-
 import { useState, useEffect } from 'react';
 import { Dialog, DialogBackdrop, DialogPanel, TransitionChild } from '@headlessui/react';
 import { Bars3Icon, MagnifyingGlassIcon, XMarkIcon, StarIcon } from '@heroicons/react/24/outline';
@@ -167,7 +165,7 @@ export default function Sidebar() {
                 </div>
 
                 <main className="py-10 lg:pl-72">
-                    <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
+                    <div className="px-4 sm:px-6 lg:px-8">{/* Content */}</div>
                 </main>
             </div>
         </>

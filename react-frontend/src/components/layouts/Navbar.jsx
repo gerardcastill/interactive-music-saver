@@ -4,8 +4,6 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import {useLocation, useNavigate} from 'react-router-dom';
 import Logo from "../../images/logo.png";
 
-
-
 function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -40,7 +38,7 @@ export default function Navbar() {
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                                 <div className="flex flex-shrink-0 items-center">
-                                    <button onCLick = {() => navigate('/')} className = "block">
+                                    <button onClick = {() => navigate('/')} className = "block">
                                         <img
                                             className="h-10 w-auto"
                                             src={Logo}
