@@ -1,4 +1,3 @@
-import React from 'react';
 import Sidebar from "./Sidebar.jsx";
 import Footer from "./Footer.jsx";
 import "../layouts/SidebarLayout.css";

@@ -1,53 +1,42 @@
-// src/services/EventService.jsx
-
 import axios from 'axios';
 
-const API_KEY = 'empty'; // Replace with your Ticketmaster API key
+const API_URL = process.env.REACT_APP_API_URL;
 
-let favoriteEvents = [];
-
-const getEvents = async (city) => {
+export const getEvents = async (city) => {
     try {
-        const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-        const response = await axios.get('https://app.ticketmaster.com/discovery/v2/events.json', {
-            params: {
-                apikey: API_KEY,
-                keyword: 'music',
-                city: city,
-                countryCode: 'US',
-                onsaleStartDateTime: `${today}T00:00:00Z`, // Start from today
-                classificationName: 'Music' // Filter for music events
-            }
+        const response = await axios.get(`${API_URL}/get_events/`, {
+            params: { city }
         });
-        let events = response.data._embedded ? response.data._embedded.events : [];
-
-        // Filter out events with invalid dates
-        events = events.filter(event => {
-            const dateTime = event?.dates?.start?.dateTime;
-            return dateTime && !isNaN(new Date(dateTime).getTime());
-        });
-
-        events = events.sort((a, b) => new Date(a.dates.start.dateTime) - new Date(b.dates.start.dateTime));
-        return events;
+        return response.data;
     } catch (error) {
         throw new Error('Error fetching events');
     }
 };
 
-const addFavoriteEvent = async (event) => {
-    if (!favoriteEvents.find(fav => fav.id === event.id)) {
-        favoriteEvents.push(event);
+export const getFavoriteEvents = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/get_favorite_events/`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching favorite events');
     }
-    return favoriteEvents;
 };
 
-const removeFavoriteEvent = async (eventId) => {
-    favoriteEvents = favoriteEvents.filter(event => event.id !== eventId);
-    return favoriteEvents;
+export const addFavoriteEvent = async (event) => {
+    try {
+        const response = await axios.post(`${API_URL}/add_favorite_event/`, event);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error adding favorite event');
+    }
 };
 
-const getFavoriteEvents = async () => {
-    return favoriteEvents;
+export const removeFavoriteEvent = async (event_id) => {
+    try {
+        const response = await axios.post(`${API_URL}/remove_favorite_event/`, { event_id });
+        return response.data;
+    } catch (error) {
+        throw new Error('Error removing favorite event');
+    }
 };
 
-export { getEvents, addFavoriteEvent, removeFavoriteEvent, getFavoriteEvents };
