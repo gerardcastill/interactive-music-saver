@@ -4,7 +4,6 @@
 - [Introduction](#introduction)
   - [Features](#features)
   - [Architecture](#architecture)
-- [Demo On AWS](#demo-on-aws)
 
 ## Introduction
 
@@ -20,9 +19,3 @@ Concerto is a full-stack web application built to help music lovers discover and
 - **Backend:** Django for handling API requests between frontend and Ticketmaster.
 - **Frontend:** Create-React-App using Javascript for components/services and tailwindCSS for styling.
 - **AWS:** S3 bucket for frontend and EC2 instance for backend
-
-## Demo On AWS
-
-An instance of the app is running on AWS if you do not wish to clone the repo and set up containers locally. Click the link 'Demo on AWS' to give it a go.
-
-[Demo On AWS](http://concerto-frontend.s3-website.us-east-2.amazonaws.com/)
